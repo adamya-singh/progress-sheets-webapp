@@ -1,5 +1,6 @@
 <!doctype html>
 <!--html5 boilerplate from https://www.sitepoint.com/a-basic-html5-template/-->
+<!-- logo button from tutorial https://www.youtube.com/watch?v=lCxfo8tvHqk&t=363s-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -24,33 +25,53 @@
 </head>
 
 <body>
+    <div class="navbar">
+      <div class="navbarBackground"></div>
   
-  <div class="progress-sheets-logo-button">
-    <button type="button"><span>Progress Sheets</span></button>
-  </div>
-
-  <div class="search-button">
-    <button type="button"><h1>Search</h1></button>
-  </div>
-
-  <div class="manage-button">
-    <button type="button"><h1>Manage</h1></button>
-  </div>
-
-  <div class="settings-button">
-    <button type="button"><h1>Settings</h1></button>
-  </div>
-
-  <div class="profile-button">
-    <button type="button"><h1>Profile</h1></button>
-  </div>
-
-  <div class="rectangle"></div>
-
-  <div class="progress-sheet-image">
-    <img src="images/progress-sheet.png">
-  </div>
+      <div class="progress-sheets-logo-button">
+        <button onclick="window.location.href='index.html';" type="button"><span>Progress Sheets</span></button>
+      </div>
   
+      <div class="search-button">
+        <button onclick="window.location.href='index.html';" type="button"><h1>Search</h1></button>
+      </div>
+  
+      <div class="manage-button">
+        <button onclick="window.location.href='manage-students.html';" type="button"><h1>Manage</h1></button>
+      </div>
+  
+      <div class="settings-button">
+        <button type="button"><h1>Settings</h1></button>
+      </div>
+  
+      <div class="profile-button">
+        <button type="button"><h1>Profile</h1></button>
+      </div>
+  
+      <div class="rectangle"></div>
+    </div>
+
+  <div class="progress-sheet-and-labels">
+    <div class="progress-sheet-image">
+        <img src="images/progress-sheet.png">
+    </div>
+    
+    <label class="ninjaName" id="Ninja's Name">
+        Ninja's Name
+    </label>
+
+    <label class="levelOneStart" id="levelOneStartDate">
+        Start Date
+    </label>
+
+    <label class="levelOneComplete" id="levelOneCompleteDate">
+        Complete Date
+    </label>
+
+    <label class="levelOneNotes" id="levelOneNotes">
+        Notes
+    </label>
+  </div>
   <!-- <script src="js/scripts.js"></script> -->
 </body>
 

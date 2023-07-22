@@ -15,18 +15,26 @@ body
     background: #8cb1d7;
     object-fit: scale-down;
 }
-.progress-sheets-logo-button
-{
+.navbar {
+    z-index: 3;
+}
+.navbarBackground {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    background: #8cb1d7;
+    height: 12%;
+    width: 100%;
 }
+
 .progress-sheets-logo-button button
 {
-    position: relative;
-    left: 20%;
+    position: fixed;
+    left: 5%;
     width: 160px;
     height: 60px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     background: #fff;
     margin: 20px;
 }
@@ -74,8 +82,8 @@ body
 .search-button
 {
     display: flex;
-    position: relative;
-    left: 20%;
+    position: fixed;
+    left: 55%;
     flex-direction: column;
 }
 
@@ -113,8 +121,8 @@ body
 .manage-button
 {
     display: flex;
-    position: relative;
-    left: 20%;
+    position: fixed;
+    left: 65%;
     flex-direction: column;
 }
 
@@ -152,8 +160,8 @@ body
 .settings-button
 {
     display: flex;
-    position: relative;
-    left: 20%;
+    position: fixed;
+    left: 75%;
     flex-direction: column;
 }
 
@@ -191,8 +199,8 @@ body
 .profile-button
 {
     display: flex;
-    position: relative;
-    left: 20%;
+    position: fixed;
+    left: 85%;
     flex-direction: column;
 }
 
@@ -236,13 +244,7 @@ body
     background: #505052;
     height: 3%;
     width: 100%;
-}
-
-.progress-sheet-image {
-    display: block;
-    margin-left: 10%;
-    position: fixed;
-    top: 25%;
+    z-index: 0;
 }
 
 .search-bar {
@@ -267,4 +269,87 @@ body
     padding: 24px 20px;
     font-size: 20px;
     color: #fff;
+}
+
+.progress-sheet-and-labels {
+    display: block;
+    margin-left: 10%;
+    position: absolute;
+    object-fit: none;
+    overflow: scroll;
+    top: 25%;
+    z-index: 1;
+}
+.ninjaName {
+    position: absolute;
+    display: block;
+    left: 27%;
+    top: 16%;
+    z-index: 2;
+}
+.levelOneStart {
+    position: absolute;
+    display: block;
+    left: 21%;
+    top: 30%;
+    z-index: 2;
+}
+.levelOneComplete {
+    position: absolute;
+    display: block;
+    left: 21%;
+    top: 34%;
+    z-index: 2;
+}
+.levelOneNotes {
+    position: absolute;
+    display: block;
+    left: 45%;
+    top: 30%;
+    z-index: 2;
+}
+.add-student-form {
+    background: #fff;
+    flex: 1;
+    border: 0;
+    outline: #040a29;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #040a29;
+}
+.full-name-input {
+    position: fixed;
+    width: 15%;
+    height: 2%;
+    left: 20%;
+    top: 30%;
+    padding: 2%;
+    background: #505052;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+}
+.level-input {
+    position: fixed;
+    width: 15%;
+    height: 2%;
+    left: 40%;
+    top: 30%;
+    padding: 2%;
+    background: #505052;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+}
+.add-student-button button {
+    top: 30%;
+    left: 60%;
+    position: fixed;
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    background: #006cb976;
+    margin: 20px;
 }
