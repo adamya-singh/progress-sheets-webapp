@@ -1,0 +1,246 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:100,200,300,400,500,600,700,800,900);
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu;
+}
+body
+{
+    display: flex;
+    min-width: 100vh;
+    height: 100%;
+    width: 100%;
+    background: #8cb1d7;
+    object-fit: scale-down;
+}
+.progress-sheets-logo-button
+{
+    display: flex;
+    flex-direction: column;
+}
+.progress-sheets-logo-button button
+{
+    position: relative;
+    left: 20%;
+    width: 160px;
+    height: 60px;
+    display: inline-block;
+    background: #fff;
+    margin: 20px;
+}
+.progress-sheets-logo-button button span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #293574;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 1px solid #040a29;
+}
+.progress-sheets-logo-button button:before,
+.progress-sheets-logo-button button:after
+{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg,#1500ff,#0e1538,#1500ff);
+    transition: 0.1s;
+}
+
+/*  controlls hover effects  */
+.progress-sheets-logo-button button:hover:before
+{
+    inset: -3px;
+}
+.progress-sheets-logo-button button:hover:after
+{
+    inset: -3px;
+    filter: blur(5px);
+}
+
+
+.search-button
+{
+    display: flex;
+    position: relative;
+    left: 20%;
+    flex-direction: column;
+}
+
+.search-button button
+{
+    top: 15%;
+    position: relative;
+    width: 140px;
+    height: 45px;
+    display: inline-block;
+    background: #006cb976;
+    margin: 20px;
+}
+
+.search-button button h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #2d313476;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    /*  letter-spacing: 2px;  */
+    color: #fff;
+    border: 1px solid #040a29;
+}
+
+.manage-button
+{
+    display: flex;
+    position: relative;
+    left: 20%;
+    flex-direction: column;
+}
+
+.manage-button button
+{
+    top: 15%;
+    position: relative;
+    width: 140px;
+    height: 45px;
+    display: inline-block;
+    background: #006cb976;
+    margin: 20px;
+}
+
+.manage-button button h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #2d313476;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    /*  letter-spacing: 2px;  */
+    color: #fff;
+    border: 1px solid #040a29;
+}
+
+.settings-button
+{
+    display: flex;
+    position: relative;
+    left: 20%;
+    flex-direction: column;
+}
+
+.settings-button button
+{
+    top: 15%;
+    position: relative;
+    width: 140px;
+    height: 45px;
+    display: inline-block;
+    background: #006cb976;
+    margin: 20px;
+}
+
+.settings-button button h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #2d313476;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    /*  letter-spacing: 2px;  */
+    color: #fff;
+    border: 1px solid #040a29;
+}
+
+.profile-button
+{
+    display: flex;
+    position: relative;
+    left: 20%;
+    flex-direction: column;
+}
+
+.profile-button button
+{
+    top: 15%;
+    position: relative;
+    width: 140px;
+    height: 45px;
+    display: inline-block;
+    background: #006cb976;
+    margin: 20px;
+}
+
+.profile-button button h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #2d313476;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    /*  letter-spacing: 2px;  */
+    color: #fff;
+    border: 1px solid #040a29;
+}
+
+
+.rectangle {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    background: #505052;
+    height: 3%;
+    width: 100%;
+}
+
+.progress-sheet-image {
+    display: block;
+    margin-left: 10%;
+    position: fixed;
+    top: 25%;
+}
