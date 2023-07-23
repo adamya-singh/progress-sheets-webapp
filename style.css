@@ -356,7 +356,7 @@ body
 .search-results {
     z-index: 3;
     position: fixed;
-    top: 80%;
+    top: 30%;
     width: 70%;
     margin: 15%;
     max-width: 100%;

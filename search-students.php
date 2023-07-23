@@ -1,7 +1,7 @@
 <!doctype html>
 <!--html5 boilerplate from https://www.sitepoint.com/a-basic-html5-template/-->
 <!-- logo button from tutorial https://www.youtube.com/watch?v=lCxfo8tvHqk&t=363s-->
-<html lang="en">
+<!--<html lang="en">-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,11 +52,12 @@
   </div>
 
   <div class="search-bar">
-    <form action="search-students.php" method = "post">
+    <form method="post">
       <input type="text" placeholder="Find student" name="searchInput">
       <button type="submit" name="submit">Submit</button>
     </form>
   </div>
+
   <div class="search-results">
     <table class="search-results">
       <thead>
@@ -67,14 +68,17 @@
       </thead>
       <tbody>
     <?php
+    echo "test";
         include 'connectDB.php';
 
         if(isset($_POST['submit'])){
+          echo "test";
         $searchInput = $_POST['searchInput'];
 
         $sql = "Select * from 'students' where fullName='$searchInput' or level='$searchInput'";
         $result = mysqli_query($connection, $sql);
         if($result){
+          echo "test";
             if(mysqli_num_rows($result)>0) {
                 echo '<thead>
                 <tr>
@@ -103,5 +107,4 @@
 
   <!-- <script src="js/scripts.js"></script> -->
 </body>
-
 </html>
