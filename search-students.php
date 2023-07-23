@@ -72,23 +72,43 @@
     </div>
   </div>
 
-  <div class="search-results">
-    <div class="col-md-12">
-      <table>
-        <thead>
-          <tr>
-              <th class="test">Full Name</th>
-              <th>Level</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+<!--START SEARCH BOX TUTORIAL CODE-->
+<div class="container">
+  <div class="row">
+    <div class="search-bar">
+      <div class="col-md-8">
+        <form action="" method="GET">
+          <input type="text" name="searchStudents" value="<?php if(isset($_GET['searchStudents'])) {echo $_GET['searchStudents'];}?>" placeholder="Find Student">
+          <button type="submit" name="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="search-results">
+      <div class="col-md-12">
+        <div class="card-mt-4">
+          <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                    <th class="test">Full Name</th>
+                    <th>Level</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+
+<!--END SEARCH BOX TUTORIAL CODE-->
 
 </body>
 

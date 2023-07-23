@@ -274,13 +274,18 @@ body
     margin-left: 10%;
     top: 50%;
     width: 80%;
-    display: block;
+    display: flex;
     background: #fff;
 }
 .table{
+    position: fixed;
+    height: 100%;
+    width: 100%;
     overflow: auto;
 }
-
+.th {
+    font-weight: 9;
+}
 .progress-sheet-and-labels {
     display: block;
     margin-left: 10%;
