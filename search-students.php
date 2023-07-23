@@ -52,10 +52,53 @@
   </div>
 
   <div class="search-bar">
-    <form action = "search-students.php" method = "post">
+    <form action="search-students.php" method = "post">
       <input type="text" placeholder="Find student" name="searchInput">
       <button type="submit" name="submit">Submit</button>
     </form>
+  </div>
+  <div class="search-results">
+    <table class="search-results">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody>
+    <?php
+        include 'connectDB.php';
+
+        if(isset($_POST['submit'])){
+        $searchInput = $_POST['searchInput'];
+
+        $sql = "Select * from 'students' where fullName='$searchInput' or level='$searchInput'";
+        $result = mysqli_query($connection, $sql);
+        if($result){
+            if(mysqli_num_rows($result)>0) {
+                echo '<thead>
+                <tr>
+                <th>Full Name</th>
+                <th>Level</th>
+                </tr>
+                </thead>
+                ';
+                while($row = mysqli_fetch_assoc($result)) {
+                echo '<tbody
+                <tr>
+                <td>'.$row['fullName'].'</td>
+                <td>'.$row['level'].'</td>
+                </tr>
+                </tbody>';
+              }
+            } else{
+                echo "<h2>Not Found</h2>";
+            }
+        }
+        }
+?>
+      </tbody>
+    </table>
   </div>
 
   <!-- <script src="js/scripts.js"></script> -->
