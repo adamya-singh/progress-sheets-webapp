@@ -21,7 +21,8 @@
   <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
   <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">-->
   <title>Student Search</title>
 
 </head>
@@ -31,7 +32,7 @@
     <div class="navbarBackground"></div>
 
     <div class="progress-sheets-logo-button">
-      <button onclick="window.location.href='index.html';" type="button"><span>Progress Sheets</span></button>
+      <button class="logoButton" type="button" onclick="window.location.href='index.html';"><span>Progress Sheets</span></button>
     </div>
 
     <div class="search-button">
@@ -61,17 +62,6 @@
     <div class="rectangle"></div>
   </div>
 
-  <div class="search-bar">
-    <div class="row">
-      <div class="col-md-8">
-        <form action="" method="GET">
-          <input type="text" name="searchStudents" value="<?php if(isset($_GET['searchStudents'])) {echo $_GET['searchStudents'];}?>" placeholder="Find Student">
-          <button type="submit" name="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
 <!--START SEARCH BOX TUTORIAL CODE-->
 <div class="container">
   <div class="row">
@@ -90,7 +80,7 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
-                    <th class="test">Full Name</th>
+                    <th>Full Name</th>
                     <th>Level</th>
                 </tr>
               </thead>
@@ -109,7 +99,7 @@
 
 
 <!--END SEARCH BOX TUTORIAL CODE-->
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

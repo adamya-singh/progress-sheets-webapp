@@ -26,9 +26,12 @@ body
     height: 12%;
     width: 100%;
 }
-
-.progress-sheets-logo-button button
-{
+.progress-sheets-logo-button {
+    position: fixed;
+    left: 5%;
+    display: flex;
+}
+.progress-sheets-logo-button button {
     position: fixed;
     left: 5%;
     width: 160px;
@@ -38,8 +41,7 @@ body
     background: #fff;
     margin: 20px;
 }
-.progress-sheets-logo-button button span
-{
+.progress-sheets-logo-button button span {
     position: absolute;
     top: 0;
     left: 0;
@@ -246,15 +248,6 @@ body
     width: 100%;
     z-index: 0;
 }
-.search-bar input {
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: #040a29;
-    padding: 24px 20px;
-    font-size: 20px;
-    color: #fff;
-}
 .search-bar {
     position: fixed;
     width: 70%;
@@ -267,24 +260,50 @@ body
     align-items: center;
     justify-content: center;
     border-radius: 60px;
-    /*padding: 10px 20px;*/
+}
+.search-bar input {
+    position: relative;
+    background: #fff;
+    flex: 1;
+    outline: #040a29;
+    padding: 1.3pc 8pc;
+    font-size: 20px;
+    color: #000;
+    border-radius: 60px;
 }
 .search-results {
     position: fixed;
-    margin-left: 10%;
+    margin-left: 0%;
     top: 50%;
-    width: 80%;
+    width: 100%;
     display: flex;
     background: #fff;
 }
 .table{
-    position: fixed;
+    position: relative;
     height: 100%;
     width: 100%;
     overflow: auto;
 }
-.th {
-    font-weight: 9;
+.card-body table {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-width: 1pc;
+    border-color: #000;
+    border-spacing: 2pc;
+    border-style: solid;
+}
+.card-body table thead tr th {
+    position: relative;
+    width: 100%;
+    font-size: x-large;
+    padding-left: 10pc;
+    border-width: 1pc;
+    border-color: #000;
+    border-spacing: 2pc;
+    border-style: solid;
 }
 .progress-sheet-and-labels {
     display: block;
