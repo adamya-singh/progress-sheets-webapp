@@ -23,23 +23,22 @@ body
     flex-direction: column;
     position: fixed;
     background: #8cb1d7;
-    height: 12%;
-    width: 100%;
+    width: 100vw;
+    height: 15vh;
 }
 .progress-sheets-logo-button {
     position: fixed;
-    left: 5%;
     display: flex;
 }
 .progress-sheets-logo-button button {
     position: fixed;
-    left: 5%;
-    width: 160px;
-    height: 60px;
+    top: 3vh;
+    left: 2vw;
+    width: 17vw;
+    height: 7vh;
     display: flex;
     flex-direction: column;
     background: #fff;
-    margin: 20px;
 }
 .progress-sheets-logo-button button span {
     position: absolute;
@@ -53,7 +52,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 2vh;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #fff;
@@ -85,19 +84,19 @@ body
 {
     display: flex;
     position: fixed;
-    left: 55%;
     flex-direction: column;
 }
 
 .search-button button
 {
-    top: 15%;
-    position: relative;
-    width: 140px;
-    height: 45px;
+    top: 4vh;
+    right: 57vw;
+    position: fixed;
+    width: 17vw;
+    height: 5vh;
+    font-size: 2vh;
     display: inline-block;
     background: #006cb976;
-    margin: 20px;
 }
 
 .search-button button h1
@@ -124,19 +123,19 @@ body
 {
     display: flex;
     position: fixed;
-    left: 65%;
     flex-direction: column;
 }
 
 .manage-button button
 {
-    top: 15%;
-    position: relative;
-    width: 140px;
-    height: 45px;
+    top: 4vh;
+    right: 39vw;
+    position: fixed;
+    width: 17vw;
+    height: 5vh;
+    font-size: 2vh;
     display: inline-block;
     background: #006cb976;
-    margin: 20px;
 }
 
 .manage-button button h1
@@ -163,19 +162,19 @@ body
 {
     display: flex;
     position: fixed;
-    left: 75%;
     flex-direction: column;
 }
 
 .settings-button button
 {
-    top: 15%;
-    position: relative;
-    width: 140px;
-    height: 45px;
+    top: 4vh;
+    right: 21vw;
+    position: fixed;
+    width: 17vw;
+    height: 5vh;
+    font-size: 2vh;
     display: inline-block;
     background: #006cb976;
-    margin: 20px;
 }
 
 .settings-button button h1
@@ -202,24 +201,24 @@ body
 {
     display: flex;
     position: fixed;
-    left: 85%;
     flex-direction: column;
 }
 
 .profile-button button
 {
-    top: 15%;
-    position: relative;
-    width: 140px;
-    height: 45px;
+    top: 4vh;
+    right: 3vw;
+    position: fixed;
+    width: 17vw;
+    height: 5vh;
+    font-size: 2vh;
     display: inline-block;
     background: #006cb976;
-    margin: 20px;
 }
 
 .profile-button button h1
 {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -244,7 +243,7 @@ body
     position: fixed;
     top: 12vh;
     background: #505052;
-    height: 3%;
+    height: 3vh;
     width: 100%;
     z-index: 0;
 }
@@ -252,11 +251,12 @@ body
     display: flex;
     flex-direction: column;
     position: fixed;
-    width: 80%;
+    width: 80vw;
     height: 15vh;
-    margin-top: 15%;
-    margin-left: 10%;
-    padding: 5%;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    padding-top: 5vh;
+    padding-left: 5vw;
     background: #505052;
     display: flex;
     border-radius: 60px;
@@ -269,11 +269,10 @@ body
     flex: 1;
     outline: #040a29;
     height: 10vh;
-    width: 87%;
+    width: 65vw;
     margin-top: -3.5vh;
-    margin-bottom: 0vh;
-    /*padding: 5% 20%;*/
-    font-size: 380%;
+    margin-left: -3vw;
+    font-size: 7vh;
     color: #000;
     border-radius: 60px;
 
@@ -283,10 +282,12 @@ body
     flex-direction: column;
     position: relative;
     flex: 1;
-    font-size: 200%;
+    font-size: 3vh;
     color: #000;
     border-radius: 60px;
-    margin-left: 63vw;
+    height: 5vh;
+    width: 12vw;
+    margin-left: 62vw;
     margin-top: -8vh;
 }
 .search-results {
@@ -299,8 +300,8 @@ body
 }
 .table{
     position: relative;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow: auto;
 }
 .card-body table {
@@ -316,9 +317,9 @@ body
 .card-body table thead tr th {
     position: relative;
     font-size: x-large;
-    border-width: 0.5pc;
+    border-width: 0.5vw;
     border-color: #000;
-    border-spacing: 2pc;
+    border-spacing: 2vw;
     border-style: solid;
 }
 .card-body table tbody tr td {
@@ -326,9 +327,9 @@ body
     position: relative;
     font-size: large;
     font-weight: 600;
-    border-width: 0.2pc;
+    border-width: 0.2vw;
     border-color: #000;
-    border-spacing: 2pc;
+    border-spacing: 2vw;
     border-style: solid;
 }
 .progress-sheet-and-labels {
@@ -378,12 +379,13 @@ body
     color: #040a29;
 }
 .full-name-input {
+    font-size: 1vh;
     position: fixed;
-    width: 15%;
-    height: 2%;
-    left: 20%;
-    top: 30%;
-    padding: 2%;
+    width: 20vw;
+    height: 5vh;
+    left: 20vh;
+    top: 30vh;
+    padding: 2vw;
     background: #505052;
     display: flex;
     align-items: center;
@@ -392,10 +394,10 @@ body
 }
 .level-input {
     position: fixed;
-    width: 15%;
-    height: 2%;
-    left: 40%;
-    top: 30%;
+    width: 20vw;
+    height: 5vh;
+    left: 45vh;
+    top: 30vh;
     padding: 2%;
     background: #505052;
     display: flex;
