@@ -85,9 +85,34 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td></td>
-                </tr>
+                <?php
+                  include "connectDB.php";
+                  if (isset($_GET['searchStudents'])) {
+                    $filtervalues = $_GET['searchStudents'];
+                    $query = "SELECT * FROM students WHERE CONCAT(fullName,level) LIKE '%$filtervalues%' ";
+                    $query_run = mysqli_query($connection, $query);
+
+                    if(mysqli_num_rows($query_run) > 0) {
+                      foreach($query_run as $items){
+                        ?>
+                        <tr>
+                          <td><?= $items['fullName']; ?></td>
+                          <td><?= $items['level']; ?></td>
+                        </tr>
+                        <?php
+                      }
+                    } else {
+                      ?>
+
+                        <tr>
+                          <td colspan="4">Not Found</td>
+                        </tr>
+
+                      <?php
+                    }
+                  }
+                ?>
+
               </tbody>
             </table>
           </div>
