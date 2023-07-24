@@ -370,48 +370,39 @@ body
     z-index: 2;
 }
 .add-student-form {
-    background: #fff;
-    flex: 1;
-    border: 0;
-    outline: #040a29;
-    padding: 24px 20px;
-    font-size: 20px;
-    color: #040a29;
-}
-.full-name-input {
-    font-size: 1vh;
-    position: fixed;
-    width: 20vw;
-    height: 5vh;
-    left: 20vh;
+    background-color: #000;
+    position: relative;
+    width: 50vw;
+    height: 43vh;
+    left: 25vh;
     top: 30vh;
+    padding: 3vw;
+    background: #505052;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+}
+.add-student-form form *{
+    position: relative;
     padding: 2vw;
-    background: #505052;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 60px;
+    width: 40vw;
+    height: 6vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 1vw;
 }
-.level-input {
-    position: fixed;
-    width: 20vw;
-    height: 5vh;
-    left: 45vh;
-    top: 30vh;
-    padding: 2%;
-    background: #505052;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 60px;
+.add-student-form form select {
+    margin-top: 2.5vh;
+    margin-bottom: -1vh;
 }
-.add-student-button button {
-    top: 30%;
-    left: 60%;
+.add-student-form button {
     position: fixed;
-    width: 120px;
-    height: 40px;
-    display: inline-block;
+    top: 62vh;
+    width: 30vw;
+    height: 6vh;
+    display: flex;
     background: #006cb976;
     margin: 20px;
 }
