@@ -29,7 +29,7 @@
     <div class="navbarBackground"></div>
 
     <div class="progress-sheets-logo-button">
-      <button onclick="window.location.href='index.html';" type="button"><span>Progress Sheets</span></button>
+      <button onclick="window.location.href='index.html';" type="button"><span>Home</span></button>
     </div>
 
     <div class="search-button">
@@ -52,13 +52,20 @@
   </div>
 
   <div class="search-bar">
-    <form action="search-students.php" method="GET">
-      <input type="text" placeholder="Find Student" name="searchInput">
-      <button type="submit" name="submit">Search</button>
+    <form id="searchBarForm" onsubmit="return false;" action="">
+      <input id="searchInput" type="text" placeholder="Find Student" name="searchInput">
+      <button type="submit" onclick="searchUsingInput();" name="submit">Search</button>
     </form>
   </div>
 
-  <!-- <script src="js/scripts.js"></script> -->
+  <script>
+    function searchUsingInput() {
+      var searchInput = document.getElementById("searchInput").value;
+      var searchLink = "search-students.php?searchStudents=" + searchInput + "&submit=";
+      window.location.href = searchLink;
+      //document.getElementById("searchBarForm").action = searchLink;
+    }
+  </script>
 </body>
 
 </html>

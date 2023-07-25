@@ -32,7 +32,7 @@
     <div class="navbarBackground"></div>
 
     <div class="progress-sheets-logo-button">
-      <button class="logoButton" type="button" onclick="window.location.href='index.html';"><span>Progress Sheets</span></button>
+      <button class="logoButton" type="button" onclick="window.location.href='index.html';"><span>Home</span></button>
     </div>
 
     <div class="search-button">
