@@ -1,21 +1,18 @@
 <?php
 
-$fullName = $_POST["fullName"];
-$level = $_POST["level"];
+$firstName = $_POST["firstName"];
+$lastName = $_POST["lastName"];
+$belt = $_POST["belt"];
 
-$host = "localhost";
-$dbname = "student_info";
-$username = "root";
-$password = "";
+include "connect-student_info.php";
 
-$connection = mysqli_connect(hostname: $host, username: $username, password: $password, database: $dbname);
-
-if (mysqli_connect_errno()) {
-    die("Connection Error: " + mysqli_connect_error());
+    $existsQuery = mysqli_query($connection,"SELECT * FROM students WHERE firstName='$firstName' AND lastName='$lastName'");        
+if(mysqli_num_rows($existsQuery)>0)
+{
+    die("Student with that name already exists in database ");
 }
 
-$sql = "INSERT INTO students (fullName, level)
-        VALUES (?, ?)";
+$sql = "INSERT INTO students (firstName, lastName, belt) VALUES (?, ?, ?)";
 
 $statement = mysqli_stmt_init($connection);
 
@@ -23,9 +20,10 @@ if (! mysqli_stmt_prepare($statement, $sql)) {
     die(mysqli_error($connection));
 }
 
-mysqli_stmt_bind_param($statement, "ss", $fullName, $level);
+mysqli_stmt_bind_param($statement, "sss", $firstName, $lastName, $belt);
 
 mysqli_stmt_execute($statement);
 
 echo "Record saved.";
+
 ?>

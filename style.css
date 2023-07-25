@@ -369,6 +369,7 @@ body
     top: 30%;
     z-index: 2;
 }
+
 .add-student-form {
     background-color: #000;
     position: relative;
@@ -387,15 +388,19 @@ body
 .add-student-form form *{
     position: relative;
     padding: 2vw;
+    top: -1vh;
     width: 40vw;
     height: 6vh;
+    margin-left: -1vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
     border-radius: 1vw;
 }
 .add-student-form form select {
-    margin-top: 2.5vh;
+    position: relative;
+    margin-top: 3vh;
     margin-bottom: -1vh;
+    margin-left: 0vw;
 }
 .add-student-form button {
     position: fixed;

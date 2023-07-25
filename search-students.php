@@ -86,7 +86,7 @@
               </thead>
               <tbody>
                 <?php
-                  include "connectDB.php";
+                  include "connect-student_info.php";
                   if (isset($_GET['searchStudents'])) {
                     $filtervalues = $_GET['searchStudents'];
                     $query = "SELECT * FROM students WHERE CONCAT(firstName,lastName) LIKE '%$filtervalues%' ";
