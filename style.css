@@ -5,15 +5,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Ubuntu;
+    text-align: center;
 }
 body
 {
     display: flex;
-    min-width: 100vh;
     height: 100%;
     width: 100%;
     background: #8cb1d7;
-    object-fit: scale-down;
+    object-fit: contain;
+    justify-content: center;
 }
 .navbar {
     z-index: 3;
@@ -242,6 +243,7 @@ body
     flex-direction: column;
     position: fixed;
     top: 12vh;
+    left: 0%;
     background: #505052;
     height: 3vh;
     width: 100%;
@@ -250,7 +252,7 @@ body
 .search-bar {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: relative;
     width: 80vw;
     height: 15vh;
     margin-top: 20vh;
@@ -300,6 +302,7 @@ body
 }
 .table{
     position: relative;
+    left: 0vw;
     height: 100vh;
     width: 100vw;
     overflow: auto;
@@ -375,7 +378,7 @@ body
     position: relative;
     width: 50vw;
     height: 43vh;
-    left: 25vh;
+    /*left: 25vh;*/
     top: 30vh;
     padding: 3vw;
     background: #505052;
@@ -387,27 +390,28 @@ body
 }
 .add-student-form form *{
     position: relative;
-    padding: 2vw;
+    display: flex;
     top: -1vh;
     width: 40vw;
     height: 6vh;
-    margin-left: -1vw;
+    margin-left: auto;
     margin-top: 1vh;
     margin-bottom: 1vh;
     border-radius: 1vw;
 }
 .add-student-form form select {
     position: relative;
-    margin-top: 3vh;
-    margin-bottom: -1vh;
-    margin-left: 0vw;
-}
-.add-student-form button {
-    position: fixed;
-    top: 62vh;
-    width: 30vw;
-    height: 6vh;
     display: flex;
-    background: #006cb976;
-    margin: 20px;
+    /*  margin-top: 3vh;
+    margin-bottom: -1vh;
+    margin-left: auto;  */
+}
+.add-student-form form button{
+    position: relative;
+    /*  top: 62vh;
+    width: 30vw;
+    height: 6vh;    */
+    display: block;
+    background-color: #006cb976;
+    /*  margin: 20px;   */
 }

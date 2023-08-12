@@ -81,6 +81,7 @@
               <thead>
                 <tr>
                     <th>Full Name</th>
+                    <th>Belt</th>
                     <th>Level</th>
                 </tr>
               </thead>
@@ -89,16 +90,16 @@
                   include "connect-student_info.php";
                   if (isset($_GET['searchStudents'])) {
                     $filtervalues = $_GET['searchStudents'];
-                    $query = "SELECT * FROM students WHERE CONCAT(firstName,lastName) LIKE '%$filtervalues%' ";
+                    $query = "SELECT * FROM students WHERE fullname LIKE '%$filtervalues%' ";
                     $query_run = mysqli_query($connection, $query);
 
                     if(mysqli_num_rows($query_run) > 0) {
                       foreach($query_run as $items){
                         ?>
                         <tr>
-                          <td><?= $items['firstName']; ?></td>
-                          <td><?= $items['lastName']; ?></td>
+                          <td><?= $items['fullName']; ?></td>
                           <td><?= $items['belt']; ?></td>
+                          <td><?= $items['beltLevel']; ?></td>
                         </tr>
                         <?php
                       }

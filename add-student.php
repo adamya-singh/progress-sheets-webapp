@@ -1,8 +1,8 @@
 <?php
 
-$fullName = $_POST["firstName"];
+$fullName = $_POST["fullName"];
 $belt = $_POST["belt"];
-$level = $_POST["beltLevel"];
+$beltLevel = $_POST["beltLevel"];
 
 include "connect-student_info.php";
 
@@ -20,7 +20,7 @@ if (! mysqli_stmt_prepare($statement, $sql)) {
     die(mysqli_error($connection));
 }
 
-mysqli_stmt_bind_param($statement, "sss", $fullName, $belt, $beltLevel);
+mysqli_stmt_bind_param($statement, "ssi", $fullName, $belt, $beltLevel);
 
 mysqli_stmt_execute($statement);
 
