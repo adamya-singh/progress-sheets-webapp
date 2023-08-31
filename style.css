@@ -24,6 +24,7 @@ body
     flex-direction: column;
     position: fixed;
     background: #8cb1d7;
+    left: 0%;
     width: 100vw;
     height: 15vh;
 }
@@ -159,14 +160,14 @@ body
     border: 1px solid #040a29;
 }
 
-.settings-button
+.sheet-view-button
 {
     display: flex;
     position: fixed;
     flex-direction: column;
 }
 
-.settings-button button
+.sheet-view-button button
 {
     top: 4vh;
     right: 21vw;
@@ -178,7 +179,7 @@ body
     background: #006cb976;
 }
 
-.settings-button button h1
+.sheet-view-button button h1
 {
     position: absolute;
     top: 0;
@@ -193,10 +194,10 @@ body
     align-items: center;
     font-size: 1em;
     text-transform: uppercase;
-    /*  letter-spacing: 2px;  */
     color: #fff;
     border: 1px solid #040a29;
 }
+
 
 .profile-button
 {
