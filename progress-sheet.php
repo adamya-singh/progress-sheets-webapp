@@ -41,7 +41,7 @@
       </div>
   
       <div class="sheet-view-button">
-        <button onclick="window.location.href='progress-sheet.html';" type="button"><h1>Sheet View</h1></button>
+        <button onclick="window.location.href='progress-sheet.php';" type="button"><h1>Sheet View</h1></button>
       </div>
   
       <div class="profile-button">
@@ -51,17 +51,14 @@
       <div class="rectangle"></div>
     </div>
 
-  <div class="progress-sheet-and-labels">
-    <div class="progress-sheet-image">
+    <div class="progress-sheet-and-labels">
+      <div class="progress-sheet-image">
         <img src="images/progress-sheet.png">
     </div>
     
-    <label class="ninjaName" id="Ninja's Name">
-        Ninja's Name
-    </label>
-
+     
     <label class="levelOneStart" id="levelOneStartDate">
-        Start Date
+      Start Date
     </label>
 
     <label class="levelOneComplete" id="levelOneCompleteDate">
@@ -71,7 +68,43 @@
     <label class="levelOneNotes" id="levelOneNotes">
         Notes
     </label>
+
+    
+    <script type='text/javascript'>
+      function updateLvlOneStartDate(){
+        document.getElementById('levelOneStartDate').innerHTML = <?= $items['fullName'];?>;
+      }
+      //updateLvlOneStartDate();
+    </script>";
+    <label class="ninjaName" id="Ninja's Name">
+        <?php
+          include "connect-student_info.php";
+          $query = "SELECT fullName FROM students";
+          $query_run = mysqli_query($connection, $query);
+          
+          echo "<select id=fullName name=studentSelect onmousedown='this.value='';' onchange='updateLvlOneStartDate();' >";
+
+          if(mysqli_num_rows($query_run) > 0) {
+            ?>
+            <option value="" disabled selected>Student Name</option>
+            <?php
+
+            
+            foreach($query_run as $items){
+              ?>
+
+              <option value=<?= $items['fullName']; ?> > <?= $items['fullName'];?> </option>
+              <?php
+            }
+          }
+          echo "</select>";
+        ?>
+    </label>
+    
+    
+
   </div>
+  
   <!-- <script src="js/scripts.js"></script> -->
 </body>
 

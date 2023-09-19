@@ -1,0 +1,418 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:100,200,300,400,500,600,700,800,900);
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu;
+    text-align: center;
+}
+body
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: #8cb1d7;
+    object-fit: contain;
+    justify-content: center;
+}
+.navbar {
+    z-index: 3;
+}
+.navbarBackground {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background: #8cb1d7;
+    left: 0%;
+    width: 100vw;
+    height: 15vh;
+}
+.progress-sheets-logo-button {
+    position: fixed;
+    display: flex;
+}
+.progress-sheets-logo-button button {
+    position: fixed;
+    top: 3vh;
+    left: 2vw;
+    width: 17vw;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+.progress-sheets-logo-button button span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #293574;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 1px solid #040a29;
+}
+.progress-sheets-logo-button button:before,
+.progress-sheets-logo-button button:after
+{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg,#1500ff,#0e1538,#1500ff);
+    transition: 0.1s;
+}
+
+/*  controlls hover effects  */
+.progress-sheets-logo-button button:hover:before
+{
+    inset: -3px;
+}
+.progress-sheets-logo-button button:hover:after
+{
+    inset: -3px;
+    filter: blur(5px);
+}
+
+
+.search-button
+{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+}
+
+.search-button button
+{
+    top: 4vh;
+    right: 57vw;
+    position: fixed;
+    width: 17vw;
+    height: 5vh;
+    font-size: 2vh;
+    display: inline-block;
+    background: #006cb976;
+}
+
+.search-button button h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #2d313476;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    /*  letter-spacing: 2px;  */
+    color: #fff;
+    border: 1px solid #040a29;
+}
+
+.manage-button
+{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+}
+
+.manage-button button
+{
+    top: 4vh;
+    right: 39vw;
+    position: fixed;
+    width: 17vw;
+    height: 5vh;
+    font-size: 2vh;
+    display: inline-block;
+    background: #006cb976;
+}
+
+.manage-button button h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #2d313476;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    /*  letter-spacing: 2px;  */
+    color: #fff;
+    border: 1px solid #040a29;
+}
+
+.sheet-view-button
+{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+}
+
+.sheet-view-button button
+{
+    top: 4vh;
+    right: 21vw;
+    position: fixed;
+    width: 17vw;
+    height: 5vh;
+    font-size: 2vh;
+    display: inline-block;
+    background: #006cb976;
+}
+
+.sheet-view-button button h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #2d313476;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #040a29;
+}
+
+
+.profile-button
+{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+}
+
+.profile-button button
+{
+    top: 4vh;
+    right: 3vw;
+    position: fixed;
+    width: 17vw;
+    height: 5vh;
+    font-size: 2vh;
+    display: inline-block;
+    background: #006cb976;
+}
+
+.profile-button button h1
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #2d313476;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    /*  letter-spacing: 2px;  */
+    color: #fff;
+    border: 1px solid #040a29;
+}
+
+
+.rectangle {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 12vh;
+    left: 0%;
+    background: #505052;
+    height: 3vh;
+    width: 100%;
+    z-index: 0;
+}
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80vw;
+    height: 15vh;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    background: #505052;
+    display: flex;
+    border-radius: 60px;
+}
+.search-bar input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+    flex: 1;
+    outline: #040a29;
+    height: 10vh;
+    width: 65vw;
+    margin-top: -3.5vh;
+    margin-left: -3vw;
+    font-size: 7vh;
+    color: #000;
+    border-radius: 60px;
+
+}
+.search-bar button {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    font-size: 3vh;
+    color: #000;
+    border-radius: 60px;
+    height: 5vh;
+    width: 12vw;
+    margin-left: 62vw;
+    margin-top: -8vh;
+}
+.search-results {
+    position: fixed;
+    margin-left: 0%;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    background: #fff;
+}
+.table{
+    position: relative;
+    left: 0vw;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+.card-body table {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-width: 0.8pc;
+    border-color: #000;
+    border-spacing: 2pc;
+    border-style: solid;
+}
+.card-body table thead tr th {
+    position: relative;
+    font-size: x-large;
+    border-width: 0.5vw;
+    border-color: #000;
+    border-spacing: 2vw;
+    border-style: solid;
+}
+.card-body table tbody tr td {
+    text-align: center;
+    position: relative;
+    font-size: large;
+    font-weight: 600;
+    border-width: 0.2vw;
+    border-color: #000;
+    border-spacing: 2vw;
+    border-style: solid;
+}
+.progress-sheet-and-labels {
+    display: block;
+    margin-left: 10%;
+    position: absolute;
+    object-fit: none;
+    overflow: scroll;
+    top: 25%;
+    z-index: 1;
+}
+.ninjaName {
+    position: absolute;
+    display: block;
+    left: 27%;
+    top: 16%;
+    z-index: 2;
+}
+.levelOneStart {
+    position: absolute;
+    display: block;
+    left: 21%;
+    top: 30%;
+    z-index: 2;
+}
+.levelOneComplete {
+    position: absolute;
+    display: block;
+    left: 21%;
+    top: 34%;
+    z-index: 2;
+}
+.levelOneNotes {
+    position: absolute;
+    display: block;
+    left: 45%;
+    top: 30%;
+    z-index: 2;
+}
+
+.add-student-form {
+    background-color: #000;
+    position: relative;
+    width: 50vw;
+    height: 43vh;
+    /*left: 25vh;*/
+    top: 30vh;
+    padding: 3vw;
+    background: #505052;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+}
+.add-student-form form *{
+    position: relative;
+    display: flex;
+    top: -1vh;
+    width: 40vw;
+    height: 6vh;
+    margin-left: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 1vw;
+}
+.add-student-form form select {
+    position: relative;
+    display: flex;
+    /*  margin-top: 3vh;
+    margin-bottom: -1vh;
+    margin-left: auto;  */
+}
+.add-student-form form button{
+    position: relative;
+    /*  top: 62vh;
+    width: 30vw;
+    height: 6vh;    */
+    display: block;
+    background-color: #006cb976;
+    /*  margin: 20px;   */
+}

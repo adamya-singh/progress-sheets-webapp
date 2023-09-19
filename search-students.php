@@ -48,7 +48,7 @@
     </div>
 
     <div class="sheet-view-button">
-      <button onclick="window.location.href='progress-sheet.html';" type="button">
+      <button onclick="window.location.href='progress-sheet.php';" type="button">
         <h1>Sheet View</h1>
       </button>
     </div>
